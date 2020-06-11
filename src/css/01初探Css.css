@@ -1,0 +1,12 @@
+/*样式文件，直接写样式代码*/
+.color-red{
+    color: red;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: "Microsoft YaHei UI", Arial, "微软雅黑";
+    line-height: 30px;
+    text-align: center;
+    text-decoration: underline;
+    text-indent: 2em;
+}

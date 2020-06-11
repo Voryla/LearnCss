@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* css使用font=family属性定义文本的字体系列*/
+        /* 使用方式*/
+        /* 1.各种字体之间必须使用英文状态下的逗号隔开*/
+        /* 2.一般情况下，如果一种字体由多个单词组成，加引号*/
+        /* 3.一般只要给body指定字体即可*/
+        div {
+            font-family: "Microsoft YaHei UI", Arial, "微软雅黑";
+        }
+
+        body {
+            /* 常用字体*/
+            font-family: "Microsoft YaHei UI", Tahoma, Arial, "Hiragino Sans GB";
+            /* 谷歌浏览器默认字体大小为16px*/
+            font-size: 20px;
+            /* 字体粗细 bold=700,normal=400，推荐使用数字不使用英语单词*/
+            font-weight: 700;
+            /*字体风格 italic斜体，normal正常字体*/
+            font-style: italic;
+        }
+
+        p {
+            /* 字体组合设置，必须严格按照以下顺序设置*/
+            /* font:font-style font-weight font-size/line-height font-family*/
+            font: normal 700 20px "Microsoft YaHei UI";
+            /* font-size font-family不可以省略,其他可以省略*/
+            font: 20px "Microsoft YaHei UI";
+            /*字体颜色的三种设置方式，最常用的是16进制*/
+            color: red;
+            color: #FF0055;
+            color: rgb(255, 0, 255);
+            color: rgb(50%, 0%, 50%);
+        }
+
+        .text-align1 {
+            /*字体位置 center left right*/
+            text-align: center;
+            /*字体装饰 none默认无装饰，underline下划线(常用)，overline上划线(几乎不用)，line-though删除线(不常用)*/
+            text-decoration: underline;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .text-indent1 {
+            /*文本的首行缩进 单位可以是像素也可以是em*/
+            text-indent: 2em;
+            /*行间距*/
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+<h3>标题标签比较特殊，需要单独指定字体大小</h3>
+<p>字体测试</p>
+<h3>字体大小属性</h3>
+<p class="text-align1">字体居中</p>
+<a href="http://www.baidu.com" target="_blank" title="a标签去下划线">a标签去下划线</a>
+<p class="text-indent1">首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩,
+    进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进
+    首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩
+    首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩
+    进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进首行缩进
+</p>
+<table border="1" cellspacing="0" cellpadding="0">
+    <thead>
+    <tr>
+        <th>属性值</th>
+        <th>描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>normal</td>
+        <td>默认值（不加粗）</td>
+    </tr>
+    <tr>
+        <td>bold</td>
+        <td>定义粗体（加粗）</td>
+    </tr>
+    <tr>
+        <td>100-900</td>
+        <td>400=normal,700=bold,数字后不跟单位，推荐使用数字调整字体粗细</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
