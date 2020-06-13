@@ -1,0 +1,24 @@
+链接伪类选择器
+    /*a:link    选择未被访问的链接*/
+    /*a:visited 选择所有已被访问的链接*/
+    /*a：hover  选择鼠标指针位于其上的链接*/
+    /*a:active  选择活动链接(鼠标按下为弹起的标签)*/
+a{
+    text-decoration: none;
+}
+a:link {
+    color: #333;
+    text-decoration: none;
+}
+
+a:visited {
+    color: orange;
+}
+
+a:hover {
+    color: pink;
+}
+
+a:active {
+    color: green;
+}

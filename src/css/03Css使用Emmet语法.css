@@ -1,0 +1,7 @@
+.one {
+    /*语法结构 单词首字母后有指定参数的如center需要：+参数首字母*/
+    /*快速生成语法ta:c*/
+    text-align: center;
+    /*ti*/
+    text-indent: 2px;
+}

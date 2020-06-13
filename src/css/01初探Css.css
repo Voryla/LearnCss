@@ -1,12 +1,20 @@
 /*样式文件，直接写样式代码*/
-.color-red{
+.color-red {
     color: red;
+    /*字体是否斜体*/
     font-style: italic;
+    /*字体的粗细*/
     font-weight: 700;
+    /*字体大小*/
     font-size: 20px;
+    /*设置字体*/
     font-family: "Microsoft YaHei UI", Arial, "微软雅黑";
+    /*设置行高*/
     line-height: 30px;
+    /*文本水平位置*/
     text-align: center;
+    /*文本装饰，下划线，上划线*/
     text-decoration: underline;
+    /*首行缩进*/
     text-indent: 2em;
 }
