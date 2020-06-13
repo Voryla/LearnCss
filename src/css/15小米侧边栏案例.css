@@ -1,0 +1,19 @@
+a {
+    width: 280px;
+    height: 48px;
+    display: block;
+    background-color: #535758;
+    text-decoration: none;
+    text-indent: 2em;
+    font-size: 16px;
+    color: #fff;
+    /*设置行高为标签的高度即可实现文字居中*/
+    line-height: 48px;
+    /*下面这句可以变为横向*/
+    /*display: table-cell;*/
+}
+
+a:hover {
+    background-color: #ff6f00;
+    text-decoration: none;
+}

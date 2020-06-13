@@ -1,0 +1,25 @@
+/*若要扩大a标签的点击范围，但是a标签是行内元素，无法设置大小*/
+/*这时使用元素显示模式转换*/
+a {
+    width: 150px;
+    height: 50px;
+    background-color: #3cc7ff;
+    /*将a标签转换为块级元素*/
+    display: block;
+}
+
+div {
+    width: 300px;
+    height: 100px;
+    background-color: pink;
+    /*将div转换为行内元素,转换后div为行内元素，所以设置宽度和高度将会无效*/
+    display: inline;
+}
+
+span {
+    width: 300px;
+    height: 100px;
+    background-color: skyblue;
+    /*将span转化为行内块元素，一行可以有多个，它的内容就是其宽度，可以设置宽度高度*/
+    display: inline-block;
+}
