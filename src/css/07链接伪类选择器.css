@@ -3,9 +3,11 @@
     /*a:visited 选择所有已被访问的链接*/
     /*a：hover  选择鼠标指针位于其上的链接*/
     /*a:active  选择活动链接(鼠标按下为弹起的标签)*/
-a{
+    /*这里的a也可以替换成其他标签或选择器代表是该标签中的链接如 h3:link,.title:link,这样的好处是防止a标签被统一设置显示方式*/
+a {
     text-decoration: none;
 }
+
 a:link {
     color: #333;
     text-decoration: none;

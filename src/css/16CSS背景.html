@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .div-color {
+            /*默认背景色为透明*/
+            background-color: transparent;
+            background-color: pink;
+            width: 300px;
+            height: 200px;
+        }
+
+        /*背景图片，background-image属性描述了元素的背景图像。
+        实际开发中常见的logo或者一些装饰性的小图片或者是超大的背景图片，
+        优点是非常便于控制位置(精灵图也是一种运用场景)*/
+        .div-image {
+            width: 800px;
+            height: 600px;
+            background-color: pink;
+            /*记得使用url()设置图片路径*/
+            background-image: url("../images/paidaxing.png");
+            /*背景图片默认为平铺*/
+            /*background-repeat: repeat;*/
+            /*设置为不平铺*/
+            background-repeat: no-repeat;
+            /*沿x轴横向平铺*/
+            /*background-repeat: repeat-x;*/
+            /*沿着y轴纵向平铺*/
+            /*background-repeat: repeat-y;*/
+        }
+
+        .div-image-position {
+            /*利用background-position属性可以改变背景图片的位置*/
+            /*参数值可以是x,y坐标值，也可以使用方位名词或者精确单位*/
+            /*精确单位：百分数，由浮点数字和单位标识符组成的长度值*/
+            /*方位名词：position top,center,bottom,left,right*/
+            /*使用方位名词时：可以使用两个或者一个，只使用一个时：另一个值浏览器会默认居中对齐（居中的方式是根据你所省略的方位名词是x轴还是y轴）
+            使用两个时：前后顺序的改变不影响图片最终的位置如 top right 和right top效果相同*/
+            background-position: top center;
+        }
+
+        .h3-title {
+            background-color: #fff;
+            background-image: url("../images/title_sprite.png");
+            background-repeat: no-repeat;
+            background-position: -40px center;
+            text-indent: 2em;
+            font-weight: 400;
+            font-size: 15px;
+            height: 20px;
+        }
+        .a-title {
+            text-decoration: none;
+        }
+        .a-title:link {
+            color: #333;
+            text-decoration: none;
+        }
+        .a-title:visited {
+            color: #333;
+        }
+        .a-title:hover {
+            color: #ff6f00;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<div class="div-color"></div>
+<div class="div-image div-image-position"></div>
+<h3 class="h3-title"><a href="https://www.baidu.com" class="a-title">成长守护平台</a></h3>
+</body>
+</html>
