@@ -40,11 +40,24 @@
             /*方位名词：position top,center,bottom,left,right*/
             /*使用方位名词时：可以使用两个或者一个，只使用一个时：另一个值浏览器会默认居中对齐（居中的方式是根据你所省略的方位名词是x轴还是y轴）
             使用两个时：前后顺序的改变不影响图片最终的位置如 top right 和right top效果相同*/
+            /*使用精确单位时：必定是按照 第一个是x，第二个是y的顺序*/
             background-position: top center;
         }
 
+        /*背景附着*/
+        /*background-attachment属性设置背景图像是否固定或者随页面的其余部分滚动*/
+        /*background-attachment后期可以制作视差滚动的效果*/
+        /*两个参数*/
+        /*1. scroll 背景图像随对象内容滚动*/
+        /*2.fixed 背景图像固定*/
+        .body-background-attachment {
+            background-attachment: fixed;
+        }
+        /*背景复合写法*/
+        .background_all {
+            background: #333 url("../images/title_sprite.png") no-repeat scroll 300px 400px;
+        }
         .h3-title {
-            background-color: #fff;
             background-image: url("../images/title_sprite.png");
             background-repeat: no-repeat;
             background-position: -40px center;
@@ -53,26 +66,45 @@
             font-size: 15px;
             height: 20px;
         }
+
         .a-title {
             text-decoration: none;
         }
+
         .a-title:link {
             color: #333;
             text-decoration: none;
         }
+
         .a-title:visited {
             color: #333;
         }
+
         .a-title:hover {
             color: #ff6f00;
+        }
+
+        .body-image-big-backgroundImage {
+            background-repeat: no-repeat;
+            background-position: center 40px;
+            background-image: url("../images/background-image.png");
+        }
+
+        .div-image-big-backgroundImage {
+            width: 800px;
+            height: 800px;
+            background-repeat: no-repeat;
+            background-position: center 40px;
+            background-image: url("../images/background-image.png");
         }
 
     </style>
     <title>Document</title>
 </head>
-<body>
+<body class="body-image-big-backgroundImage body-background-attachment">
 <div class="div-color"></div>
 <div class="div-image div-image-position"></div>
 <h3 class="h3-title"><a href="https://www.baidu.com" class="a-title">成长守护平台</a></h3>
+<div class="div-image-big-backgroundImage"></div>
 </body>
 </html>
