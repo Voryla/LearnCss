@@ -33,14 +33,14 @@
             /*background-repeat: repeat-y;*/
         }
 
+        /*利用background-position属性可以改变背景图片的位置*/
+        /*参数值可以是x,y坐标值，也可以使用方位名词或者精确单位*/
+        /*精确单位：百分数，由浮点数字和单位标识符组成的长度值*/
+        /*方位名词：position top,center,bottom,left,right*/
+        /*使用方位名词时：可以使用两个或者一个，只使用一个时：另一个值浏览器会默认居中对齐（居中的方式是根据你所省略的方位名词是x轴还是y轴）
+        使用两个时：前后顺序的改变不影响图片最终的位置如 top right 和right top效果相同*/
+        /*使用精确单位时：必定是按照 第一个是x，第二个是y的顺序*/
         .div-image-position {
-            /*利用background-position属性可以改变背景图片的位置*/
-            /*参数值可以是x,y坐标值，也可以使用方位名词或者精确单位*/
-            /*精确单位：百分数，由浮点数字和单位标识符组成的长度值*/
-            /*方位名词：position top,center,bottom,left,right*/
-            /*使用方位名词时：可以使用两个或者一个，只使用一个时：另一个值浏览器会默认居中对齐（居中的方式是根据你所省略的方位名词是x轴还是y轴）
-            使用两个时：前后顺序的改变不影响图片最终的位置如 top right 和right top效果相同*/
-            /*使用精确单位时：必定是按照 第一个是x，第二个是y的顺序*/
             background-position: top center;
         }
 
@@ -51,12 +51,23 @@
         /*1. scroll 背景图像随对象内容滚动*/
         /*2.fixed 背景图像固定*/
         .body-background-attachment {
-            background-attachment: fixed;
+            background-attachment: scroll;
         }
-        /*背景复合写法*/
+
+        /* 背景透明*/
+        .div-image-transparent {
+            /*rgba r=red  g=green  b=blue a=alpha前面三个参数也分别代表这三种颜色，
+            最后一个参数代表透明度 范围0-1 1为不透明 0为全透明 半透明为0.5值越小透明度越高，一般不需要写0.几 把0省略直接写 .几就行*/
+            background: rgba(0, 0, 0, .5);
+            width: 300px;
+            height: 300px;
+        }
+
+        /*背景复合写法，没有硬性要求，一般为 颜色 背景图 平铺方式 背景附着 x y*/
         .background_all {
             background: #333 url("../images/title_sprite.png") no-repeat scroll 300px 400px;
         }
+
         .h3-title {
             background-image: url("../images/title_sprite.png");
             background-repeat: no-repeat;
@@ -98,13 +109,20 @@
             background-image: url("../images/background-image.png");
         }
 
+        .div-zongjie {
+            width: 1200px;
+            height: 500px;
+            background: url("../images/backgroundImage-zongjie.png") no-repeat scroll;
+        }
     </style>
     <title>Document</title>
 </head>
+<div class="div-zongjie"></div>
 <body class="body-image-big-backgroundImage body-background-attachment">
 <div class="div-color"></div>
 <div class="div-image div-image-position"></div>
 <h3 class="h3-title"><a href="https://www.baidu.com" class="a-title">成长守护平台</a></h3>
 <div class="div-image-big-backgroundImage"></div>
+<div class="div-image-transparent"></div>
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*关于权重的练习题*/
+        .nav {
+            color: red;
+        }
+
+        li {
+            color: pink;
+        }
+
+
+        /*    需求把第一个li改为粉色加粗,显然先择的权重为0，0，1，0，而.nav li的权重为0,0,1,1所以无法实现*/
+        .nav li {
+            color: green;
+        }
+
+        .pink {
+            color: pink;
+            font-weight: 700;
+        }
+
+        .nav .pink {
+            color: pink;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav">
+    <li class="pink">人</li>
+    <li>人</li>
+    <li>人</li>
+    <li>人</li>
+    <li>人</li>
+</ul>
+</body>
+</html>
