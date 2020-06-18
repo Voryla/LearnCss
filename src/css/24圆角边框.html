@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        body {
+            width: 1000px;
+            border: 1px solid #333333;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+
+        /*绘制圆角边*/
+        /*属性 border-radius 后跟数值或百分比,圆角边框的原理是，
+        当设置该属性时，以该属性的值为半径绘制圆，该圆分别顶住四个角，四个角与圆边所相交的区域切去*/
+        /*当border-radius的值到达50%或者当前元素的最大宽度的一半，该元素就成了一个圆*/
+        /*当要设置为左右两侧大圆弧的话将border-radius值设置为高度的一半即可*/
+        .div1 {
+            margin-top: 30px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div class="div1"></div>
+<h3 style="text-align: center">---圆角框原理图---</h3>
+<img src="../images/yuanjiaokuangyuanli.png" alt="">
+</body>
+</html>
