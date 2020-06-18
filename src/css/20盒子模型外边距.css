@@ -1,0 +1,66 @@
+/*外边距(margin)*/
+/*margin属性用于设置外边距,即控制盒子和盒子之间的距离*/
+/*分别由上下左右, margin简写方式代表的意义跟padding完全一致*/
+html {
+    border: 1px solid red;
+
+}
+
+body {
+    border: 1px solid #333;
+    background-color: pink;
+}
+
+div {
+    width: 300px;
+    height: 300px;
+    background-color: #3cc7ff;
+    margin: 50px;
+}
+
+/*外边距可以让块级盒子水平居中,但是必须满足两个条件*/
+/*1.盒子必须指定了宽度*/
+/*2.盒子左右的外边距都设置为auto*/
+.header {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/*------------------------------------------------外边距使用上的一些常见问题-----------------------------------------------*/
+/*问题1*/
+/*使用外边距使盒子水平居中时只作用于块级元素，如果行内或者行内块元素也要水平居中对齐，
+1.先创建一个块级元素并使其水平居中2.将行内或者行内块元素放入块级元素中3.给其父类添加text-align:center属性
+（使用该方法应当注意：若块级元素使用了宽高则宽高要大于子元素）*/
+
+/*问题2*/
+/*当盒子A嵌套于父级元素盒子B时调整盒子A的外边距时，会导致塌陷问题，也就是A的外边距不起作用，反而作用于父级元素盒子B，使盒子父级元素B带着盒子A一起改变位置*/
+/*三种解决方案*/
+/*1.可以为父元素设置边框，嫌边框麻烦的话还可以把边框的颜色设置为透明  border:1px solid transparent*/
+/*2.可以为父元素设置内边距,别忘了再调整父级元素的大小*/
+/*3.可以为父元素添加overflow:hidden*/
+/*由于第1，2两种方法都会导致盒子的大小改变，所以推荐第3种方式*/
+
+.dodo {
+    width: 500px;
+    height: 500px;
+    background-color: purple;
+    /*border: 1px solid transparent;*/
+    /*padding-top: 100px;*/
+    overflow: hidden;
+}
+
+.dodo-son {
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+}
+
+/*清除内外边距*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*行内元素为了照顾兼容性，尽量只设置左右内外边距，
+不要设置上下内外边距，但是转化为块级和行内块级元素就可以了*/

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #666666;
+        }
+
+        i {
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .box {
+            margin: 50px auto;
+            background-color: #fcfcfc;
+            width: 230px;
+            height: 322px;
+            text-align: center;
+        }
+
+        .box a, a:hover {
+            color: #666666;
+            text-decoration: none;
+        }
+
+        .box a .commodity-img {
+            margin-top: 30px;
+        }
+
+        .box a .info {
+            width: 190px;
+            height: 48px;
+            font-size: 14px;
+            margin: 40px 20px 5px;
+            line-height: 24px;
+        }
+
+        .box a .info .info-self {
+            width: 34px;
+            height: 16px;
+            background-color: #e1251b;
+            font-size: 12px;
+            color: #ffffff;
+            line-height: 16px;
+            padding: 0 5px;
+        }
+
+        .box a .more-item-hd {
+            height: 66px;
+            margin: 10px 20px;
+        }
+
+        .more-item-hd .price {
+            color: #e1251b;
+            font-size: 12px;
+            text-align: left;
+            display: inline-block;
+            float: left;
+            width: 105px;
+            height: 18px;
+            line-height: 10px;
+        }
+
+        .price .price-txt {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .price .price-txt-decimal {
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .more-item-hd .more-price-plus {
+            text-align: right;
+            width: 50px;
+            height: 24px;
+            display: inline-block;
+            line-height: 24px;
+
+        }
+        /*因为此时还没有学远角边所以满减看着有点奇怪*/
+        .more-price-plus .more-price-discount {
+            font-size: 14px;
+            width: 38px;
+            height: 16px;
+            border: 1px solid #e1251b;
+            line-height: 16px;
+            text-align: center;
+            /*表示在哪个方向浮动*/
+            float: right;
+            color: #e1251b;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <a href="#" target="_blank" title="戴尔（DELL）23.8英寸 IPS  低蓝光不闪屏 四边微边框 600尼特 个人商用办公 电脑显示器 S2419HM">
+        <img src="../images/display.jpg" class="commodity-img">
+        <p class="info"><i class="info-self">自营</i> 戴尔（DELL）23.8英寸 IPS 低蓝光不闪屏 四边微边...</p>
+        <div class="more-item-hd">
+            <div class="price">
+                <i>¥</i>
+                <span class="price-txt">1299.</span>
+                <span class="price-txt-decimal">00</span>
+            </div>
+            <div class="more-price-plus">
+                <div class="more-price-discount">满减</div>
+            </div>
+        </div>
+    </a>
+</div>
+</body>
+</html>

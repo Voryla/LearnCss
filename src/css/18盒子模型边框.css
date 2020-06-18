@@ -1,0 +1,51 @@
+/*看透网页布局的本质*/
+/*布局过程*/
+/*1.先准备好相关的网页元素，网页元素基本都是盒子box*/
+/*2.利用Css设置好盒子样式，然后摆放到相应位置*/
+/*3.往盒子里装内容*/
+/*网页布局的核心本质:利用Css摆盒子*/
+/*Css盒子模型本质上是一个盒子,封装周围的HTML元素,它包括:边框,外边距,内边距,和实际内容*/
+
+/*盒子模型的结构图*/
+.div-summary {
+    width: 700px;
+    height: 450px;
+    background: url("../images/BoxModel.png") no-repeat scroll center top;
+}
+
+/*盒子的边框设置*/
+/*边框会影响盒子的最终大小,如下,当前盒子的宽高都是300px 行高是5px那么这个盒子的实际宽高都是305px*/
+/*因此我们有两种方案解决*/
+/*1.测量盒子大小的时候,不量边框*/
+/*2.如果测量了边框,则需要width/height减去边框宽度*/
+.div-border {
+    width: 300px;
+    height: 300px;
+    /*设置边框的宽度*/
+    border-width: 5px;
+    /*需要为边框设置样式后才会显示边框*/
+    /*solid:实线 dashed:虚线 dotted:点线*/
+    border-style: solid;
+    /*默认颜色为黑色*/
+    border-color: red;
+    /*边框的复合写法,没有严格的顺序要求*/
+    border: 1px solid red;
+    /*边框也可以单独修改*/
+    border-top: 5px solid red;
+    border-bottom: 5px dashed pink;
+    /*边框颜色可以设置为透明*/
+    border:1px solid transparent;
+}
+
+table {
+    width: 500px;
+    height: 400px;
+    border: 1px solid pink;
+}
+
+td,
+th {
+    border: 1px solid pink;
+    /*将两个单元格重叠部位的边框合并为一个边框,不至于两个重叠后显示的边框较宽*/
+    border-collapse: collapse;
+}
