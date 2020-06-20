@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+        }
+
+        .box {
+            width: 1226px;
+            height: 460px;
+            margin: 0 auto;
+        }
+
+        .head_left {
+            width: 230px;
+            height: 460px;
+            background-color: rgba(0, 0, 0, .2);
+            float: left;
+        }
+
+        .head_right {
+            width: 1226px;
+            height: 460px;
+            background-image: url("../images/heard.jpg");
+        }
+
+        .brick_list {
+            width: 992px;
+            height: 307px;
+            list-style: none;
+            margin: 0 auto;
+        }
+
+        .brick_list li {
+            width: 234px;
+            height: 260px;
+            margin-left: 14px;
+            margin-bottom: 14px;
+            float: left;
+            padding: 20px 0;
+            text-align: center;
+            background-color: #ffffff;
+
+        }
+
+        .brick_list li:hover {
+            box-shadow: 5px 3px 20px rgba(0, 0, 0, .2);
+        }
+
+        .brick_list li a, a:hover {
+            text-decoration: none;
+            color: #757575;
+            width: 234px;
+            height: 260px;
+        }
+
+        .figure-image {
+            width: 160px;
+            height: 160px;
+            margin:0 auto 18px;
+        }
+
+        .title {
+            color: #333333;
+            margin: 0 10px 2px;
+            font-weight: 400;
+        }
+        .desc {
+            color: #b0b0b0;
+            margin:0 10px 10px;
+            font-size: 14px;
+        }
+        .price {
+            color: #ff6700;
+            margin:0 10px 14px;
+        }
+        .num {
+
+        }
+        .price del{
+            color: #b0b0b0;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="head_left"></div>
+    <div class="head_right"></div>
+</div>
+<ul class="brick_list">
+    <li>
+        <a href="#" target="_blank">
+            <div class="figure-image">
+                <img width="160px" height="160px" src="../images/phone1.jpg">
+            </div>
+            <h3 class="title">小米10 青春版 5G</h3>
+            <p class="desc">50倍潜望式变焦/轻薄5G手机</p>
+            <p class="price">
+                <span class="num">2099</span>元<span>起</span>
+            </p>
+        </a>
+    </li>
+    <li>
+        <a href="#" target="_blank">
+            <div class="figure-image">
+                <img width="160px" height="160px" src="../images/phone2.jpg">
+            </div>
+            <h3 class="title">小米10</h3>
+            <p class="desc">晓龙865/1亿像素相机</p>
+            <p class="price">
+                <span class="num">3799</span>元<span>起</span>
+                <del>3999元</del>
+            </p>
+        </a>
+    </li>
+    <li> <a href="#" target="_blank">
+        <div class="figure-image">
+            <img width="160px" height="160px" src="../images/phone3.jpg">
+        </div>
+        <h3 class="title">Redmi K30 Pro</h3>
+        <p class="desc">双模5G,晓龙865,弹出全面屏</p>
+        <p class="price">
+            <span class="num">2397</span>元<span>起</span>
+            <del>2999元</del>
+        </p>
+    </a></li>
+    <li> <a href="#" target="_blank">
+        <div class="figure-image">
+            <img width="160px" height="160px" src="../images/phone4.jpg">
+        </div>
+        <h3 class="title">Redmi K30 Pro 变焦版</h3>
+        <p class="desc">双模5G,晓龙865,弹出全面屏</p>
+        <p class="price">
+            <span class="num">3799</span>元<span>起</span>
+        </p>
+    </a></li>
+</ul>
+</body>
+</html>

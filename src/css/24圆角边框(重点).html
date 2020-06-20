@@ -18,19 +18,24 @@
         }
 
         div {
-            width: 300px;
+            width: 600px;
             height: 300px;
             background-color: pink;
         }
 
         /*绘制圆角边*/
-        /*属性 border-radius 后跟数值或百分比,圆角边框的原理是，
+        /*属性 border-radius 后跟数值或百分比,也可以跟4/2个值，
+        4个值时其顺序是左上，右上，右下，左下
+        2个值时：对角线关系左上右下，右上左下
+        圆角边框的原理是，
         当设置该属性时，以该属性的值为半径绘制圆，该圆分别顶住四个角，四个角与圆边所相交的区域切去*/
-        /*当border-radius的值到达50%或者当前元素的最大宽度的一半，该元素就成了一个圆*/
-        /*当要设置为左右两侧大圆弧的话将border-radius值设置为高度的一半即可*/
+        /*当border-radius的值到达50%或者当前元素的最大宽度的一半，该元素就成了一个圆（画圆需要盒子的宽高相同）*/
+        /*当要设置为左右两侧大圆弧的话将border-radius值设置为高度的一半即可（大圆弧，宽度大于高度时呈横向，高度大于宽度时呈纵向）*/
         .div1 {
             margin-top: 30px;
-            border-radius: 20px;
+            border-radius: 200px;
+            /*可以单独设置*/
+            /*border-top-left-radius: 30px;*/
         }
     </style>
 </head>

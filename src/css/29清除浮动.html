@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*先来谈谈为什么要清除浮动*/
+        /*1.如果我们的父级盒子的大小确定，如应用于新闻页面场景，其新闻内容并不确定，若给定高度，那么会存在父级盒子或多或少的问题，因此就会引发下面的问题↓*/
+        /*2.如果不给定盒子的高度，让子级元素自己撑开父级元素，当子盒子均为标准流时父级盒子的高度会自动撑开，而当子级盒子是浮动，非标准流时，*/
+        /*父级盒子的高度就会为0，不能达到指定的布局要求，影响布局排版。*/
+        /*综上述两点，我们需要清除浮动*/
+
+        /*清除浮动的本质*/
+        /*1.清除浮动的本质就是清除浮动元素造成的布局影响。*/
+        /*2.如果父盒子本身有高度，则不需要清除浮动。*/
+        /*3.清除浮动之后，父级就会根据浮动的子盒子自动检测高度。父级元素就有了高度，就不会影响下面的标准流了。*/
+
+        /*清除浮动的策略*/
+        /*闭合浮动.只让浮动在盒子内部影响，不影响父级盒子外面的其他盒子*/
+
+        /*下面展示的就是浮动所带来的问题，影响了排版*/
+        .box {
+            width: 900px;
+            border: 2px solid #4c4c4c;
+            /*方法2*/
+            /*overflow: hidden;*/
+        }
+
+        .header_left {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            float: left;
+        }
+
+        .header_right {
+            width: 500px;
+            height: 400px;
+            background-color: #3cc7ff;
+            float: left;
+        }
+
+        .context {
+            height: 200px;
+            background-color: #333333;
+            margin-top: 10px;
+        }
+
+        /*清除浮动的方法*/
+        /*1.额外标签法也成为隔墙法，是W3C推荐的做法9(了解即可，不推荐使用)*/
+        /*其做法是，在最后一个浮动元素的后面添加
+        一个空标签，该标签必须是块级元素，并给定该标签
+         clear:both属性(clear有三个属性分别是left，right，both通常使用both)，该属性的意思是当前属性左边或右边或左右不允许有浮动元素*/
+        /*优点：通俗易懂，书写方法。*/
+        /*缺点：添加了许多无意义的标签，机构化较差。*/
+
+        /*.clear {*/
+        /*    clear: both;*/
+        /*}*/
+
+        /*2.给父级元素添加overflow:hidden属性*/
+        /*优点：代码简洁*/
+        /*缺点：无法显示溢出部分*/
+
+        /*3.:after伪元素(百度，淘宝，网易都是使用该方法清除浮动)*/
+        /*:after方式是额外标签法的升级版,也是给父元素添加*/
+        /*原理：就是在父盒子后添加一个空盒子*/
+        /*优点：没有增加标签，结构更简单。*/
+        /*缺点：需要照顾低版本浏览器。*/
+        /*.clearfix:after {*/
+        /*    content: "";*/
+        /*    display: block;*/
+        /*    height: 0;*/
+        /*    clear: both;*/
+        /*    visibility: hidden;*/
+        /*}*/
+
+        /*.clearfix {*/
+        /*    !*IE6,7 专有，为了照顾IE6,7低版本浏览器*!*/
+        /*    *zoom: 1;*/
+        /*}*/
+
+        /*4.双伪元素清除浮动,也是给父类添加。(小米，腾讯使用该方法清除浮动)原理：前后都添加一个空盒子*/
+        优点：代码更简洁。
+        缺点：照顾低版本浏览器。
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="box clearfix">
+    <div class="header_left"></div>
+    <div class="header_right"></div>
+    <div class="clear"></div>
+</div>
+<!--方法1:在此处添加一个空标签，并指定.clear类选择器-->
+<div class="context"></div>
+</body>
+</html>

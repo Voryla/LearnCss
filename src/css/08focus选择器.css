@@ -3,4 +3,5 @@
 /*一般情况<input>类表单元素才能获取，因此这个选择器也主要针对于表单元素来说。*/
 input:focus {
     background-color: pink;
+
 }

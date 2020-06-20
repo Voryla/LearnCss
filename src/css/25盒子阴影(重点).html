@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+
+        /*鼠标移动至div时显示阴影，因为还没有学css里的过渡效果，所以目前看起来有些生硬*/
+        div:hover {
+            /*阴影设置*/
+            /*第一个值：必需！表示阴影的水平位置，允许负值，值越大向右移动越多，值越小向左移动越多*/
+            /*第二个值：必需！表示阴影的垂直位置，允许负值，值越大向下移动越多，值越小向上移动越多*/
+            /*第三个值：可选！表示阴影的模糊度，允许负值，值越大越模糊，当值为0时阴影完全成纯色显示*/
+            /*第四个值：可选！表示阴影的大小，允许负值值越大阴影越大，值越小阴影越小*/
+            /*第五个值：可选！表示阴影的颜色，可以是16进制/rgb/rgba，推荐使用rgba带有透明效果*/
+            /*第六个值：可选！默认值为outset外部阴影，可更改为inset表示盒子内部显示阴影，*/
+            /*需要注意的是：*/
+            /*1.第六个值不可以写outset，如果是外部阴影，直接是默认值，如果填写了outset盒子的阴影将会消失*/
+            /*2.阴影效果不占用盒子的大小，不会影响其他盒子的排列*/
+            box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, .3);
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
