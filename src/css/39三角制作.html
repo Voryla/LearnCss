@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*三角形的制作*/
+        /*1.宽高必须为0*/
+        /*2.设置*/
+        /*三角形的大小取决于边框的宽度*/
+
+        /*四条边设置*/
+        .box1 {
+            width: 0;
+            height: 0;
+            /*照顾浏览器兼容性的两句话*/
+            /*line-height: 0;*/
+            /*font-size: 0;*/
+            border-top: 10px solid pink;
+            border-right: 10px solid skyblue;
+            border-bottom: 10px solid green;
+            border-left: 10px solid darkslateblue;
+        }
+
+        /*四条以内三角形设置*/
+        .box2 {
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-top-color: darkslateblue;
+            margin-top: 100px;
+        }
+
+        /*三角形的应用*/
+        .jd {
+            position: relative;
+            width: 100px;
+            height: 300px;
+            background-color: #3cc7ff;
+        }
+
+        .jd .triangle {
+            position: absolute;
+            /*由于隐藏了其他边框,盒子的宽高为边框的宽度因此改变位置时,应当考虑到盒子的大小问题*/
+            left:20px;
+            top:-60px;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+            border: 30px solid transparent;
+            border-bottom-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<br>
+<div class="jd">
+    <div class="triangle"></div>
+</div>
+</body>
+</html>

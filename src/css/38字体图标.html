@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @font-face {
+            /*当要使用字体图标时，需要引入该字体名称*/
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?mh119y');
+            src: url('fonts/icomoon.eot?mh119y#iefix') format('embedded-opentype'),
+            url('fonts/icomoon.ttf?mh119y') format('truetype'),
+            url('fonts/icomoon.woff?mh119y') format('woff'),
+            url('fonts/icomoon.svg?mh119y#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        span {
+            /*字体名称与上面相同*/
+            font-family: 'icomoon';
+        }
+
+        /*由于精灵图存在一些文件较大,大图片一旦制作完成后期更改困难等缺点，于是字体图标iconfont出现了，*/
+        /*字体图标可以为前端工程师提供一种方便高效的图标使用方式，展示的是图标，本质属于字体*/
+
+        /*字体图标*/
+        /*轻量级：一个图标字体要比一系列的图像要小。一旦字体加载了，图标就会马上渲染出来，减少了服务器请求*/
+        /*灵活性：本质其实是文字，可以很随意的改变颜色，产生阴影，透明，旋转等*/
+        /*兼容性：几乎支持所有的浏览器，请放心使用*/
+        /*注意：字体图标不能完全替代精灵图的功能，只是对工作中图标部分技术的提升和优化*/
+        /*如果遇到结构和样式比较简单的小图标，就用字体图标*/
+        /*如果遇到一些结构和样式复杂的小图片，就用精灵图*/
+
+        /*字体图标是一些网页常见的小图标，我们直接网上下载即可。因此使用可以分为：*/
+        /*1.字体图标的下载*/
+        /*    1.下载完毕后解压文件 2.将下载包中的font文件夹放入页面根目录下，不同浏览器所支持的字体格式不同，之所以字体图标能够兼容，
+        就是因为包含了主流浏览器支持的字体文件*/
+        /*2.字体图标的引入(引入到我们html页面中)，也就是查看下载之后的解压包里的dome页面，复制后面的符号即可使用*/
+        /*3.字体图标的追加(以后添加新的小图标)*/
+        /* 1.打开字体图标的下载网站。2.上传之前下载字体文件包中的selection.json文件。3.再进行选择需要追加的图标。4.再次下载即可  */
+    </style>
+</head>
+<body>
+<!--复制demo页面中的字体-->
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</body>
+</html>

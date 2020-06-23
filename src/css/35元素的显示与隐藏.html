@@ -5,7 +5,6 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
     <style>
         /*元素显示与隐藏*/
         /*类似网站广告，当我们点击关闭就不见了，但是我们重新刷新页面，会重新出现。*/
@@ -18,14 +17,41 @@
         /*visibility(可见性) 显示隐藏*/
         /*参数：*/
         /*inherit继承上一个父对象的可见性*/
-        /*hidden：对象隐藏，位置保留*/
+        /*hidden：对象隐藏，继续占有原来的位置*/
         /*visible：对象可视*/
         /*collapse：主要用来隐藏表格的行或列。隐藏的行或列能够被其他内容使用。(不常用)*/
 
-        /*overflow 溢出显示隐藏*/
+
+        /*overflow 溢出内容的显示与隐藏*/
+        /*visible(默认值)：不剪切内容也不添加滚动条。加入显式声明此默认值，对象将被剪切为包含对象的window或frame的大小。并且clip属性设置将失效*/
+        /*auto:此为body对象和textarea的默认值。仅在需要剪切的内容处添加滚动条。*/
+        /*hidden：不显示超过对象尺寸的内容。(当有定位的盒子，如视频的右上角的热度标识，故意设置的有超出部分，此时设置overflow:hidden将不能达到效果，慎用！)*/
+        /*scroll：总是显示滚动条。*/
+        .context {
+            /*显示溢出部分*/
+            /*overflow: visible;*/
+
+            /*添加滚动条*/
+            /*overflow: auto;*/
+
+            /*隐藏溢出内容，文字并没有被浏览器删除而是被隐藏起来，查看源代码时，还是能看到文本*/
+            /*overflow: hidden;*/
+
+            /*无论如何均添加底部和右侧滚动条*/
+            overflow: scroll;
+
+            width: 300px;
+            height: 150px;
+            border: 1px solid skyblue;
+        }
     </style>
+    <title>Document</title>
 </head>
 <body>
-
+<div class="context">
+    将身儿来至在大街前，尊一声过往宾朋听从头，一不是响马并贼寇，二不是歹人把城偷，杨林与我来争斗，因此上发配到登州，舍不得太爷的恩情厚，舍不得衙役们
+    众班头，实难舍街坊四邻与我的好朋友，舍不得老娘白了头，娘生儿连心肉，儿行千里母担忧，儿想娘身难叩首，娘想儿来泪双流，眼见得红日坠落在西山后，叫一声
+    解差把店投。
+</div>
 </body>
 </html>
