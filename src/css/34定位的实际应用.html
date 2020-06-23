@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tb_promo {
+            position: relative;
+            margin: 0 auto;
+            width: 590px;
+            height: 470px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        /*给图片指定宽高，防止图片不规范给布局造成的影响*/
+        .tb_promo img {
+            width: 590px;
+            height: 470px;
+        }
+
+        .tb_promo a,
+        a:hover {
+            text-decoration: none;
+            color: #fcfcfc;
+        }
+
+        /*将两个盒子中的公共代码放到并集选择器中，代码更加优雅*/
+        .prev,
+        .next {
+            position: absolute;
+            width: 20px;
+            height: 30px;
+            top: 50%;
+            margin-top: -15px;
+            background-color: rgba(0, 0, 0, .2);
+            font-size: 16px;
+            line-height: 30px;
+            background-color: #333333;
+        }
+
+        /*再分别设置左右两个盒子的不同之处*/
+        .prev {
+            left: 0;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .tb_promo .next {
+            right: 0;
+            border-radius: 15px 0 0 15px;
+        }
+
+        .promo_nav {
+            position: absolute;
+            left: 50%;
+            width: 70px;
+            height: 13px;
+            margin-left: -35px;
+            bottom: 15px;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, .3);
+        }
+
+        .promo_nav li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: 3px;
+        }
+        li:focus {
+            background-color: pink;
+        }
+        .promo_nav .selected {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+<body>
+<div class="tb_promo">
+    <img src="../images/tb_promo.jpg" alt="">
+    <a class="prev" href="#">&lt;</a>
+    <a class="next" href="#">&nbsp;&gt;</a>
+    <ul class="promo_nav">
+        <li class="selected"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>
