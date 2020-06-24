@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*HTML5的新增特性主要是针对于以前的不足，增加了一些新的标签，新的表单和新的表单属性等(这些新特性都有兼容性问题,IE9+以上版本的浏览器才支持)*/
+        /*以前布局,我们基本使用div来做,div对于搜索引擎来说,是没有语义的*/
+        /*因此HTML5新增的语义化标签*/
+        /*<header>:头部标签*/
+        /*<nav>:导航标签*/
+        /*<article>:内容标签*/
+        /*<section>:定义文档某个区域*/
+        /*<aside>:侧边栏标签*/
+        /*<footer>:尾部标签*/
+
+        /*注意:*/
+        /*1.这种语义化标准主要是针对搜索引擎的*/
+        /*2.这些心标签页面中可以使用多次(多次使用时,还是使用选择器予以区分)*/
+        /*3.在IE9中,需要把这些元素转换为块级元素*/
+        /*4.其实,我们移动端跟喜欢使用这些标签*/
+        /*5.HTML5还增加了很多其他标签,后续继续学些*/
+        header, nav {
+            width: 800px;
+            height: 70px;
+            border-radius: 30px;
+            background-color: pink;
+            margin: 15px auto;
+            text-align: center;
+        }
+
+        section {
+            width: 800px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+<header>头部标签</header>
+<nav>导航栏标签</nav>
+<section>某个区域</section>
+<img src="../images/HTML5NewSomethingpng.png" alt="">
+</body>
+</html>

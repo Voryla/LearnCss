@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #2460d9;
+        }
+
+        a, a:hover {
+            text-decoration: none;
+        }
+
+        /*Css的vertical-align属性使用场景：经常用于设置图片或者表单（行内块元素）, 和文字垂直对齐。*/
+        /*官方解释：用于设置一个元素的垂直对齐方式，但是它只作用于行内元素或者行内块元素有效*/
+        /*语法：*/
+        /*vertical-algin: baseline |top |middle |bottom*/
+        /*baseline 默认。元素放置在父元素的基线上。*/
+        /*top 把元素的顶端与行中最高元素的顶端对齐。*/
+        /*middle:把此元素放置在父元素的中部。*/
+        /*bottom把元素的顶端与行中最低的元素的顶端对齐。*/
+
+
+        /*图片，表单都属于行内块元素，默认的vertical-align是基线对齐*/
+        /*此时可以给图片，表单这些行内块元素的vertical-align属性设置为middle就可以让文字和图片垂直居中对齐了*/
+
+        /*解决底侧空白缝隙*/
+        /*问题：当设置图片时，并给父容器指定边框时，图片与边框底下会产生缝隙。*/
+        /*问题出现的原因是：*/
+        /*vertical-align默认的是基线对齐，也就是和文字的基线对齐，所以底部会产生缝隙*/
+
+        /*解决图片底部*/
+        /*1.这时候就要把vertical-align的属性值更改为不要与基线对齐即可*/
+        /*2.把图片转换为块级元素display：block；*/
+        img {
+            /*vertical-align: middle;*/
+        }
+
+        .mi {
+            width: 320px;
+            height: 56px;
+            margin-top: 50px;
+            border-radius: 25px;
+            text-align: center;
+            line-height: 52px;
+            background-color: red;
+        }
+
+        .logo, .logo_text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .logo {
+            width: 24px;
+            height: 24px;
+            background: url("../images/mi-logo.png") no-repeat 0;
+            background-size: 24px;
+        }
+
+        .logo_text {
+            font-size: 18px;
+            margin-left: 12px;
+            color: #1851d7;
+        }
+        .tt {
+            border:2px solid red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<div class="tt">
+    <img src="../images/phone1.jpg" alt="">图片和文字居中显示
+</div>
+<div class="mi">
+    <a href="#">
+        <i class="logo"></i>
+        <span class="logo_text">使用小米账号登录</span>
+    </a>
+</div>
+</body>
+</html>

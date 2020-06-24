@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 400px;
+            height: 200px;
+            background-color: pink;
+        }
+        /*因为盒子的浮动，会压住后面的标准流盒子，但并不会压住里面的文本内容,利用这个技巧，文本的盒子无需浮动，即可实现文字围绕浮动元素的效果*/
+        .pic {
+            width: 120px;
+            float: left;
+        }
+        .pic img{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="pic">
+        <img src="../images/phone1.jpg" alt="">
+    </div>
+    <div class="text">
+        123897u987983798789sh<br></br>kjdfhksjdhkjsdbkusdfdsdf
+    </div>
+</div>
+</body>
+</html>
