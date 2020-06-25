@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        div img {
+            /*计算函数，可以根据父盒子的大小改变自身的大小可以进行+ - * /的运算*/
+            width: calc(100% - 20px);
+            /*模糊度，数值越大模糊度越大*/
+            filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="../images/tudouwang.jpg" alt="">
+</div>
+</body>
+</html>

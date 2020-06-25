@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*新增的Css3特性有兼容性问题,ie9+才支持*/
+        /*移动端支持由于PC端*/
+        /*不断改进中*/
+        /*应用相对广泛*/
+        /*现阶段主要学习:新增选择器和盒子模型以及其他特性*/
+
+        /*Css3新增的选择器,可以更加便捷,更加自由的选择目标元素*/
+        /*1.属性选择器*/
+        /*2.结构伪类选择器*/
+        /*3.伪元素选择器*/
+
+        /*<!--1.利用属性选择器就可以不用借助于类或者id选择器 E[att] 选择带有att属性的E元素-->*/
+        input[value] {
+            color: skyblue;
+            outline: none;
+        }
+
+        /*<!--2.属性选择器还可以选择属性=值的某些元素 E[att="val"] 选择att属性且属性值等于val的E元素(重点掌握)-->*/
+        input[value="猪猪"] {
+            color: pink;
+        }
+
+        /*<!--3.属性选择器可以选择属性值开头的某些元素-->*/
+        div[class^="icon"] {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin-top: 10px;
+        }
+
+        /*<!--4.属性选择器可以选择属性值结尾的某些元素 E[att$="val"]匹配以val结尾的E元素-->*/
+        div[class$="date"] {
+            width: 100px;
+            height: 100px;
+            background-color: #3cc7ff;
+            margin-top: 5px;
+        }
+
+        /*<!--5.只要指定的属性值中包含该值即被选中 E[att*="val"] 匹配具有att属性且值中含有val的E元素-->*/
+        div[class*="du"] {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+<!--属性选择器(权重为0010,属性选择器代表的是[],[]前再有其他选择器时,
+                                        权重应叠加,如:div[class="header"]权重为(div(元素选择器)1+([]属性选择器10)=0011))-->
+
+<!--1.利用属性选择器就可以不用借助于类或者id选择器 E[att] 选择带有att属性的E元素-->
+<input type="text" value="请输入用户名">
+<input type="text">
+<!--2.属性选择器还可以选择属性=值的某些元素 E[att="val"] 选择att属性且属性值等于val的E元素(重点掌握)-->
+<input type="text" value="猪猪">
+<!--3.属性选择器可以选择属性值开头的某些元素 E[att^="开头"]-->
+<div class="icon1"></div>
+<div class="icon2"></div>
+<div class="icon3"></div>
+<div class="icon4"></div>
+
+<!--4.属性选择器可以选择属性值结尾的某些元素 E[att$="val"]匹配以val结尾的E元素-->
+<div class="icon1-date"></div>
+<div class="icon2-date"></div>
+<div class="icon3-date"></div>
+<div class="icon4"></div>
+
+<!--5.只要指定的属性值中包含该值即被选中 E[att*="val"] 匹配具有att属性且值中含有val的E元素-->
+<div class="duke1"></div>
+<div class="duke2"></div>
+<div class="duke3"></div>
+</body>
+</html>

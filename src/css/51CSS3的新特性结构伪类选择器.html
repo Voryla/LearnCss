@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*51CSS3的新特性属性选择器*/
+        /*结构伪类选择器(权重为10，但是要加上冒号前的其他选择器的权重)*/
+        /*结构伪类选择器主要根据文档结构来选择元素,常用于根据父级选择器中的子元素*/
+        /*E与:间要有空格*/
+        /*选择符                 简介*/
+        /*E :first-child       匹配父元素中的第一个子元素E*/
+        /*E :last-child        匹配父元素中的最后一个E元素*/
+        /*E :nth-child(n)      匹配父元素中的第nge子元素E或者多个特定的子元素*/
+        /*E :first-of-type     指定类型E的第一个*/
+        /*E :last-of-type      指定类型E的最后一个*/
+        /*E :nth-of-type(n)    指定类型E的第n个*/
+
+        /*child 和type的区别*/
+        /*1.mth-child 对父元素里面的所有盒子排序选择(序号是固定的)先找到第n个孩子，然后看看是否和E匹配*/
+        /*2.nth-of-type对父元素里面指定子元素进行排序选择，先去匹配E，然后再根据E找到din个孩子*/
+        ul :first-child {
+            background-color: skyblue;
+        }
+
+        ul :last-child {
+            background-color: red;
+        }
+
+        ul :nth-child(3) {
+            background-color: pink;
+        }
+
+        /*E :nth-child(n)n可以是关键字*/
+        /*选中偶数行,关键字even*/
+        ul :nth-child(even) {
+            background-color: #3cc7ff;
+        }
+
+        /*选中奇数行,关键字odd*/
+        ul :nth-child(odd) {
+            background-color: gray;
+        }
+
+        /*n可以是公式:常见的公式如下(如果n是公式,则从0开始计算,但是第0个元素或者超出了元素的个数会被忽略)*/
+        /*n也可以是2n(偶数),2n+1(奇数),5n(5,10,15),n+5(从第5个开始)包含第五个到最后,-n+5 前5个(包含第五个)*/
+        ol :nth-child(n+4){
+            background-color: pink;
+        }
+
+        /*nth-child 会把所有的盒子都排列序号*/
+        /*执行的时候首先选中nth-child（1）之后，再看是否匹配div*/
+        section div:nth-child(1){
+            /*选中了第一个时，发现元素类型不匹配*/
+            background-color: red;
+        }
+
+        /*nth-of-type 会把所有指定元素排列序号*/
+        /*执行时先看指定元素，之后回去看nth-of-type(1) 第几个孩子*/
+        section div:nth-of-type(1){
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>我是第1个孩子</li>
+    <li>我是第2个孩子</li>
+    <li>我是第3个孩子</li>
+    <li>我是第4个孩子</li>
+    <li>我是第5个孩子</li>
+    <li>我是第6个孩子</li>
+    <li>我是第7个孩子</li>
+    <li>我是第8个孩子</li>
+    <li>我是第9个孩子</li>
+    <li>我是第10个孩子</li>
+</ul>
+<ol>
+    <li>我是第1个孩子</li>
+    <li>我是第2个孩子</li>
+    <li>我是第3个孩子</li>
+    <li>我是第4个孩子</li>
+    <li>我是第5个孩子</li>
+    <li>我是第6个孩子</li>
+    <li>我是第7个孩子</li>
+    <li>我是第8个孩子</li>
+    <li>我是第9个孩子</li>
+    <li>我是第10个孩子</li>
+</ol>
+<section>
+    <p>光头强</p>
+    <div>熊大</div>
+    <div>熊二</div>
+</section>
+</body>
+</html>

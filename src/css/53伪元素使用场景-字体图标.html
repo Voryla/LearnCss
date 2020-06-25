@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?mh119y');
+            src: url('fonts/icomoon.eot?mh119y#iefix') format('embedded-opentype'),
+            url('fonts/icomoon.ttf?mh119y') format('truetype'),
+            url('fonts/icomoon.woff?mh119y') format('woff'),
+            url('fonts/icomoon.svg?mh119y#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+        div {
+            position: relative;
+            width: 150px;
+            height: 20px;
+            border:1px solid red;
+        }
+        div::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            /*设置字体名称*/
+            font-family: 'icomoon';
+            /*复制字体*/
+            /*content: '';*/
+            /*也可以使用字体代码*/
+            content: '\e9c7';
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
