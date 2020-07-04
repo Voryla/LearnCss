@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: #b0b0b0;
+        }
+
+        p {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            /*以前的做法，不具有重用性，如果盒子本身大小改变，还需要改变margin的值*/
+            /*margin-left: -100px;*/
+            /*margin-top: -100px;*/
+            /*使用2D转换的移动，设置距离为百分比，正好是根据自身移动位置,复用性较好*/
+            transform: translate(-50%, -50%);
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p></p>
+</div>
+</body>
+</html>
