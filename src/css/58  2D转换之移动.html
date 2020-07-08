@@ -7,7 +7,9 @@
         /*转换(transform)是CSS3中具有颠覆性的特征之一，可以实现元素的位移，旋转， 缩放等效果，转换(transform)你可以简单的理解为变形*/
 
         /*1.移动：translate 2D移动是2D转换里面的一种功能，可以改变元素在页面中的位置，类似定位。移动盒子位置的三种方法：定位 盒子的外边距 2d转换移动*/
-        /*语法：transform:translate(x,y);或者分开写*/
+        /*!*语法：transform:translate(x,y);*/
+        /*或者分开写,不过分开写虽然一个控制x一个控制y但会导致后一个translate覆盖上一个translate*/
+        /*虽然可以这么写：transform:translateX(n) translateY(n);但是不如合并写*/
         /*transform:translateX(n);*/
         /*transform:translateY(n);*/
         /*移动的重点*/

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*原理是添加一个正方形，只设置右边框和下边框，然后顺时针旋转45度即可*/
+        div {
+            position: relative;
+            width: 245px;
+            height: 35px;
+            border: 2px solid #333333;
+            line-height: 35px;
+        }
+
+        div::before {
+            /*伪元素是行内元素，当使用定位后成为块级元素，即可更改大小*/
+            cursor: pointer;
+            position: absolute;
+            right: 15px;
+            top: 8px;
+            content: '';
+            width: 10px;
+            height: 10px;
+            /*设置右边框和下边框*/
+            border-right: 1px solid #333333;
+            border-bottom: 1px solid #333333;
+            /*旋转45度*/
+            transform: rotate(45deg);
+        }
+        /*经过div时改变伪元素的属性*/
+        div:hover::before {
+            transform: rotate(225deg);
+            border-color: #c81623;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

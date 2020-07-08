@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1 {
+            position: relative;
+            overflow: hidden;
+            width: 200px;
+            height: 30px;
+            background-color: pink;
+        }
+
+        .div2 {
+            position: absolute;
+            right: -200px;
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 20px;
+            animation: move 2s steps(10) infinite;
+        }
+
+        @keyframes move {
+            0% {
+
+            }
+            100% {
+                right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    <div class="div2">今天是个开心的好日子</div>
+</div>
+</body>
+</html>

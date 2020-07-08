@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .dotted {
+            position: relative;
+            margin: 100px auto 50px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #009dfd;
+        }
+
+        .dotted div[class^="pulse"] {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            box-shadow: 0 0 12px #009dfd;
+            animation: pulse 1s linear infinite;
+        }
+
+        .dotted div.pulse2 {
+
+            animation-delay: 0.3s;
+        }
+        /*元素.可以类选择器名称*/
+        .dotted div.pulse3 {
+            animation-delay: 0.6s;
+        }
+
+        /*这里使用宽高进行缩放而不是transform:scale()是因为scale进行缩放时会把阴影的模糊度放大*/
+        @keyframes pulse {
+            0% {
+
+            }
+            70% {
+                width: 38px;
+                height: 38px;
+                opacity: 1;
+            }
+            100% {
+                width: 68px;
+                height: 68px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="city">
+    <div class="dotted">
+        <div class="pulse1"></div>
+        <div class="pulse2"></div>
+        <div class="pulse3"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*x轴：水平向右 注意：x右正左负*/
+        /*y轴：垂直向下 注意：y下正上负*/
+        /*z轴：垂直屏幕 注意：外正里负 (z轴的单位一定要使用px)*/
+
+        /*主要知识点*/
+        /*3D位移：translate3d(x,y,z)*/
+        /*3D旋转：rotate3d(x,y,z)*/
+        /*透视：perspective*/
+        /*模拟人类的视觉位置，可认为安排一只眼睛去看*/
+        /*透视我们也成为视距：视距就是人眼到屏幕的距离*/
+        /*距离视觉点越近的在电脑平面成像越大，越远成像越小*/
+        /*透视的单位是像素*/
+        /*透视卸载被观察元素的父盒子上面*/
+        /*d：就是视距，视距就是一个距离人眼到屏幕的距离*/
+        /*z：就是z轴，物体距离屏幕的距离，z轴越大(正值)我们看到的物体就越大*/
+
+        /*3D呈现：transfrom-style*/
+        body{
+            background-color: #666666;
+            perspective: 200px;
+        }
+        .div1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /*x y z不能省略，如果没有就写0*/
+            transform: translate3d(600px,100px,100px);
+        }
+    </style>
+</head>
+<body>
+<div class="div1"></div>
+</body>
+</html>

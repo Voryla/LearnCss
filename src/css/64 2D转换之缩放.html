@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*2D转换之缩放scale*/
+        /*优势：缩放的同时并不会影响其他的盒子*/
+        /*语法：transform:scale(x,y); x,y的值不带单位*/
+        /*注意：*/
+        /*1.其中x和y用逗号隔开*/
+        /*2.transform:scale(1,1) 宽和高都乘以1，就是没有放大*/
+        /*3.transform:scale(2,2) 宽和高都乘以2*/
+        /*4.transform：scale(2) 只写一个参数，第二个参数则和第一个参数一样，相当于 scale(2,2)*/
+        /*5.transform:scale(0.5,0.5)缩小*/
+        /*6.scale缩放最大的优势：可以设置转换中心点缩放，默认以中心点缩放的，而且不影响其他盒子*/
+
+        /*2D转换的综合写法*/
+        /*注意：*/
+        /*1.同时使用多个转换，其格式为：transform:translate()rotate()scale()...等*/
+        /*2.其顺序会影响选转换的效果。(线旋转会改变坐标方向)*/
+        /*3.当我们同时又位移和其他属性的时候，记得要将位移放到最前*/
+
+        .div1 {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin: 200px auto;
+            /*设置中心点*/
+            transform-origin: left bottom;
+        }
+
+        .div1:hover {
+            transform: scale(.5, .5);
+        }
+
+        .div2 {
+            width: 400px;
+            height: 400px;
+            margin-right: 10px;;
+            overflow: hidden;
+        }
+
+        .div2 img {
+            transition: all .3s ease;
+        }
+
+        .div2 img:hover {
+            /*scale放大时不会影响其他的盒子*/
+            transform: scale(1.1);
+        }
+
+        li {
+            float: left;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #b0b0b0;
+            border-radius: 50%;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 40px;
+            list-style: none;
+            transition: all .3s;
+        }
+
+        li:hover {
+            transform: scale(1.2);
+        }
+        .div3 {
+            width: 100px;
+            height: 100px;
+            background-color: #666666;
+            transition: all .4s;
+        }
+        .div3:hover{
+            transform: translate(50px,50px) rotate(180deg) scale(1.2);
+        }
+    </style>
+</head>
+<body>
+<div class="div1"></div>
+<div class="div2"><img src="../images/paidaxing.png" alt=""></div>
+<div class="div3"></div>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+</body>
+</html>
